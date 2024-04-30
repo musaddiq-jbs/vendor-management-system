@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'vendors.apps.VendorsConfig',
     'rest_framework_simplejwt',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -133,4 +134,17 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'Enter the token in the format: Bearer &lt;token&gt;',
+        }
+    },
+    'SECURITY_REQUIREMENTS': [{'Bearer': []}],
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'vendor_management.swagger_auth.SwaggerAutoSchemaWithJWT',
 }

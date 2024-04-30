@@ -13,7 +13,7 @@ The Vendor Management System is a Django-based web application that allows you t
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/vendor-management-system.git
+   git clone https://github.com/musaddiq-jbs/vendor-management-system.git
    ```
 
 2. Navigate to the project directory:
@@ -65,7 +65,7 @@ The Vendor Management System is a Django-based web application that allows you t
    python manage.py runserver
    ```
 
-9. Access the application in your web browser at `http://localhost:8000`.
+9. Access the API documentation at `http://localhost:8000/swagger/`.
 
 ## API Endpoints
 
