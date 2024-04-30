@@ -143,6 +143,7 @@ SWAGGER_SETTINGS = {
             'name': 'Authorization',
             'in': 'header',
             'description': 'Enter the token in the format: Bearer &lt;token&gt;',
+            'prefix': 'Bearer',
         }
     },
     'SECURITY_REQUIREMENTS': [{'Bearer': []}],
